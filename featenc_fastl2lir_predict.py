@@ -56,10 +56,12 @@ def featenc_fastl2lir_predict(
     layers = layers[::-1]  # Start training from deep layers
 
     # Print info -------------------------------------------------------------
-    print('Encoders:        %s' % encoder_path)
-    print('Subjects:        %s' % subjects)
-    print('ROIs:            %s' % rois)
-    print('Layers:          %s' % layers)
+    print('Encoders:  %s' % encoder_path)
+    print('Subjects:  %s' % subjects)
+    print('ROIs:      %s' % rois)
+    print('Source features')
+    print('Path:   %s' % features_paths)
+    print('Layers: %s' % layers)
     print('')
 
     # Load data --------------------------------------------------------
@@ -88,9 +90,9 @@ def featenc_fastl2lir_predict(
 
     for layer, sbj, roi in product(layers, subjects, rois):
         print('--------------------')
-        print('Layer:    %s' % layer)
-        print('Subject:  %s' % sbj)
-        print('ROI:      %s' % roi)
+        print('Layer:   %s' % layer)
+        print('Subject: %s' % sbj)
+        print('ROI:     %s' % roi)
 
         # Distributed computation setup
         # -----------------------------
@@ -125,7 +127,7 @@ def featenc_fastl2lir_predict(
 
         # Model directory
         # ---------------
-        model_dir = os.path.join(encoder_path, layer, sbj, roi, 'model')
+        model_dir = os.path.join(encoder_path, layer, sbj, roi, "model")
 
         # Preprocessing
         # -------------

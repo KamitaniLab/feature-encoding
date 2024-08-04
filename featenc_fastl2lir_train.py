@@ -69,8 +69,8 @@ def featenc_fastl2lir_train(
     print('Path:   %s' % features_paths)
     print('Layers: %s' % layers)
     print('Target brain data')
-    print('Subjects:   %s' % list(fmri_data.keys()))
-    print('ROIs:       %s' % list(rois.keys()))
+    print('Subjects:  %s' % list(fmri_data.keys()))
+    print('ROIs:      %s' % list(rois.keys()))
     print('')
 
     # Load data --------------------------------------------------------------
@@ -101,19 +101,19 @@ def featenc_fastl2lir_train(
 
     for layer, sbj, roi in product(layers, fmri_data, rois):
         print('--------------------')
-        print('Layer:      %s' % layer)
-        print('Num units:  %d' % num_unit[layer])
-        print('Subject:    %s' % sbj)
-        print('ROI:        %s' % roi)
+        print('Layer:     %s' % layer)
+        print('Num units: %d' % num_unit[layer])
+        print('Subject:   %s' % sbj)
+        print('ROI:       %s' % roi)
 
         # Setup
         # -----
         analysis_id = analysis_name + '-' + sbj + '-' + roi + '-' + layer
-        results_dir = os.path.join(output_dir, layer, sbj, roi, 'model')
-        makedir_ifnot(results_dir)
+        model_dir = os.path.join(output_dir, layer, sbj, roi, "model")
+        makedir_ifnot(model_dir)
 
         # Check whether the analysis has been done or not.
-        info_file = os.path.join(results_dir, 'info.yaml')
+        info_file = os.path.join(model_dir, 'info.yaml')
         if os.path.exists(info_file):
             with open(info_file, 'r') as f:
                 info = yaml.safe_load(f)
@@ -173,7 +173,7 @@ def featenc_fastl2lir_train(
         }
         save_targets = [u'x_mean', u'y_mean', u'x_norm', u'y_norm']
         for sv in save_targets:
-            save_file = os.path.join(results_dir, sv + '.mat')
+            save_file = os.path.join(model_dir, sv + '.mat')
             if not os.path.exists(save_file):
                 try:
                     save_array(save_file, norm_param[sv], key=sv, dtype=np.float32, sparse=False)
@@ -210,7 +210,7 @@ def featenc_fastl2lir_train(
         train.dtype = np.float32
         train.chunk_axis = chunk_axis
         train.save_format = 'bdmodel'
-        train.save_path = results_dir
+        train.save_path = model_dir
         train.distcomp = distcomp
 
         train.run()
