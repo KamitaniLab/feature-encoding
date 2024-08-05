@@ -12,23 +12,22 @@ encoder:
       - name: sub-01
         paths:
           - ./data/fmri/Deeprecon/sub-01_${encoder.fmri.name}.h5
-      #- name: sub-02
-      #  paths:
-      #    - ./data/fmri/Deeprecon/sub-02_${encoder.fmri.name}.h5
-      #- name: sub-03
-      #  paths:
-      #    - ./data/fmri/Deeprecon/sub-03_${encoder.fmri.name}.h5
+      - name: sub-02
+        paths:
+          - ./data/fmri/Deeprecon/sub-02_${encoder.fmri.name}.h5
+      - name: sub-03
+        paths:
+          - ./data/fmri/Deeprecon/sub-03_${encoder.fmri.name}.h5
     rois:
-      #- {name: V1,  select: ROI_V1 = 1}
-      #- {name: V2,  select: ROI_V2 = 1}
-      #- {name: V3,  select: ROI_V3 = 1}
+      - {name: V1,  select: ROI_V1 = 1}
+      - {name: V2,  select: ROI_V2 = 1}
+      - {name: V3,  select: ROI_V3 = 1}
       - {name: hV4, select: ROI_hV4 = 1}
       #- {name: LOC, select: ROI_LOC = 1}
       #- {name: FFA, select: ROI_FFA = 1}
       #- {name: PPA, select: ROI_PPA = 1}
       #- {name: LVC, select: ROI_LVC = 1}
-      #- {name: HVC, select: ROI_HVC = 1}
-      #- {name: VC,  select: ROI_VC = 1}
+      - {name: HVC, select: ROI_HVC = 1}
     label_key: stimulus_name
 
   features:
@@ -51,9 +50,9 @@ encoder:
       #- {name: conv5_1, num: 500}
       #- {name: conv5_2, num: 500}
       #- {name: conv5_3, num: 500}
-      - {name: conv5_4, num: 500}
-      #- {name: fc6,     num: 500}
-      #- {name: fc7,     num: 500}
+      #- {name: conv5_4, num: 500}
+      - {name: fc6,     num: 500}
+      - {name: fc7,     num: 500}
       - {name: fc8,     num: 500}
 
 encoded_fmri:
@@ -72,23 +71,22 @@ encoded_fmri:
       - name: sub-01
         paths:
           - ./data/fmri/Deeprecon/sub-01_${encoded_fmri.fmri.name}.h5
-      #- name: sub-02
-      #  paths:
-      #    - ./data/fmri/Deeprecon/sub-02_${encoded_fmri.fmri.name}.h5
-      #- name: sub-03
-      #  paths:
-      #    - ./data/fmri/Deeprecon/sub-03_${encoded_fmri.fmri.name}.h5
+      - name: sub-02
+        paths:
+          - ./data/fmri/Deeprecon/sub-02_${encoded_fmri.fmri.name}.h5
+      - name: sub-03
+        paths:
+          - ./data/fmri/Deeprecon/sub-03_${encoded_fmri.fmri.name}.h5
     rois:
-      #- {name: V1,  select: ROI_V1 = 1}
-      #- {name: V2,  select: ROI_V2 = 1}
-      #- {name: V3,  select: ROI_V3 = 1}
+      - {name: V1,  select: ROI_V1 = 1}
+      - {name: V2,  select: ROI_V2 = 1}
+      - {name: V3,  select: ROI_V3 = 1}
       - {name: hV4, select: ROI_hV4 = 1}
       #- {name: LOC, select: ROI_LOC = 1}
       #- {name: FFA, select: ROI_FFA = 1}
       #- {name: PPA, select: ROI_PPA = 1}
       #- {name: LVC, select: ROI_LVC = 1}
-      #- {name: HVC, select: ROI_HVC = 1}
-      #- {name: VC,  select: ROI_VC = 1}
+      - {name: HVC, select: ROI_HVC = 1}
     label_key: stimulus_name
     exclude_labels:
 
@@ -112,7 +110,7 @@ encoded_fmri:
       #- {name: conv5_1, num: 500}
       #- {name: conv5_2, num: 500}
       #- {name: conv5_3, num: 500}
-      - {name: conv5_4, num: 500}
-      #- {name: fc6,     num: 500}
-      #- {name: fc7,     num: 500}
+      #- {name: conv5_4, num: 500}
+      - {name: fc6,     num: 500}
+      - {name: fc7,     num: 500}
       - {name: fc8,     num: 500}
