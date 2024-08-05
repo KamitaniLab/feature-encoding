@@ -1,4 +1,4 @@
-'''DNN Feature decoding - decoders test (prediction) script'''
+"""DNN Feature encoding - fMRI prediction script"""
 
 
 from typing import Dict, List, Optional
@@ -31,21 +31,29 @@ def featenc_fastl2lir_predict(
         chunk_axis: Optional[int] = 1,
         analysis_name: Optional[str] = "fmr_prediction"
 ):
-    '''Feature prediction.
+    """Feature prediction.
 
-    Input:
-
-    - fmri_data
-    - feature_decoder_dir
-
-    Output:
-
-    - output_dir
-
-    Parameters:
-
-    TBA
-    '''
+    Parameters
+    ----------
+    features_paths : List[str]
+        List of paths to the feature data.
+    encoder_path : str
+        Path to the encoder directory.
+    output_dir : str, optional
+        Output directory.
+    subjects : List[str], optional
+        List of subjects.
+    rois : List[str], optional
+        List of ROIs.
+    layers : List[str], optional
+        List of layers.
+    feature_index_file : str, optional
+        Feature index file.
+    chunk_axis : int, optional
+        Chunk axis.
+    analysis_name : str, optional
+        Analysis name.
+    """
     if subjects is None:
         subjects = []
     if rois is None:

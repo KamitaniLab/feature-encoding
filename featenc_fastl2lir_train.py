@@ -1,4 +1,4 @@
-'''DNN Feature encoding - model training script.'''
+"""DNN Feature encoding - model training script."""
 
 
 from typing import Dict, List, Optional
@@ -37,26 +37,38 @@ def featenc_fastl2lir_train(
         chunk_axis: int = 1,
         analysis_name: str = "feature_encoder_training"
 ):
-    '''Feature encoding model training.
+    """Feature encoding model training.
 
-    Input:
+    Parameters
+    ----------
+    fmri_data : dict
+        Dictionary of fMRI data.
+    features_paths : list of str
+        List of paths to DNN features.
+    output_dir : str, optional
+        Output directory.
+    rois : dict, optional
+        Dictionary of ROIs.
+    label_key : str, optional
+        Key of the label in the fMRI data.
+    layers : list of str, optional
+        List of layer names.
+    num_unit : dict, optional
+        Dictionary of the number of selected units in each layer.
+    feature_index_file : str, optional
+        Path to the feature index file.
+    alpha : int, optional
+        Regularization parameter.
+    chunk_axis : int, optional
+        Chunk axis.
+    analysis_name : str, optional
+        Analysis name.
 
-    - fmri_data
-    - features_paths
-
-    Output:
-
-    - output_dir
-
-    Parameters:
-
-    TBA
-
-    Note:
-
+    Note
+    ----
     If Y.ndim >= 3, Y is divided into chunks along `chunk_axis`.
     Note that Y[0] should be sample dimension.
-    '''
+    """
     if rois is None:
         rois = {}
     if layers is None:
