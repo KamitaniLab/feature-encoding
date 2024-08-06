@@ -65,7 +65,7 @@ Requried data:
 python train_encoding_fastl2lir.py config/encoding_deeprecon_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 
 # Prediction of fMRI responses
-python predict_fmri_fastl2lir.py  encoding_deeprecon_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
+python predict_fmri_fastl2lir.py  config/encoding_deeprecon_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 ```
 
 Evaluation: see [evaluation.ipynb](evaluation.ipynb)
@@ -85,7 +85,7 @@ Note that this requires a large amount of RAM (~100GB) and may only be runnable 
 python train_encoding_fastl2lir.py config/encoding_deeprecon_vgg19_pyfastl2lir_alpha100_select500units.yaml
 
 # Prediction of fMRI responses
-python predict_fmri_fastl2lir.py  encoding_deeprecon_vgg19_pyfastl2lir_alpha100_select500units.yaml
+python predict_fmri_fastl2lir.py  config/encoding_deeprecon_vgg19_pyfastl2lir_alpha100_select500units.yaml
 ```
 
 Evaluation: see [evaluation.ipynb](evaluation.ipynb) (need modification)
