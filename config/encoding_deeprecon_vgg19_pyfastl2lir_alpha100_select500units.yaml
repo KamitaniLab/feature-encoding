@@ -9,9 +9,9 @@ encoder:
   fmri:
     name: ImageNetTraining_fmriprep_volume_native
     subjects:
-      - name: sub-01
-        paths:
-          - ./data/fmri/Deeprecon/sub-01_${encoder.fmri.name}.h5
+      #- name: sub-01
+      #  paths:
+      #    - ./data/fmri/Deeprecon/sub-01_${encoder.fmri.name}.h5
       - name: sub-02
         paths:
           - ./data/fmri/Deeprecon/sub-02_${encoder.fmri.name}.h5
@@ -68,9 +68,9 @@ encoded_fmri:
   fmri:
     name: ImageNetTest_fmriprep_volume_native
     subjects:
-      - name: sub-01
-        paths:
-          - ./data/fmri/Deeprecon/sub-01_${encoded_fmri.fmri.name}.h5
+      #- name: sub-01
+      #  paths:
+      #    - ./data/fmri/Deeprecon/sub-01_${encoded_fmri.fmri.name}.h5
       - name: sub-02
         paths:
           - ./data/fmri/Deeprecon/sub-02_${encoded_fmri.fmri.name}.h5
