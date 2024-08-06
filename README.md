@@ -9,7 +9,15 @@ The encoding analysis is used in the following study:
 
 ### Environment setup
 
-TBA
+See [requirements.txt](requirements.txt) for the required Python packages.
+
+Here is example commands to setup environment using venv.
+
+```shell
+python -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+```
 
 ### Data setup
 
@@ -54,6 +62,8 @@ python download.py features_imagenet_test_vgg19
 
 ### Using randomly selected 5000 units in each layer
 
+This is light-weighted version of the encoding analysis, which uses randomly selected 5000 units in each layer of VGG-19 instead of all units. The analysis code is expected to run on a typical personal computer.
+
 Requried data:
 
 - `fmri_deeprecon_fmriprep_vc`
@@ -72,13 +82,13 @@ Evaluation: see [evaluation.ipynb](evaluation.ipynb)
 
 ### Using all DNN units
 
+This version uses all units in each layer of VGG-19. Note that this requires a large amount of RAM (~100GB) and may only be runnable in HPCs.
+
 Requried data:
 
 - `fmri_deeprecon_fmriprep_vc`
 - `features_imagenet_training_vgg19`
 - `features_imagenet_test_vgg19`
-
-Note that this requires a large amount of RAM (~100GB) and may only be runnable in HPCs.
 
 ```shell
 # Training of encoding models
