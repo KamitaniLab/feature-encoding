@@ -145,43 +145,43 @@ def featenc_fastl2lir_train(
 
         start_time = time()
 
-        # DNN features
-        x = data_features.get(layer=layer)
-        x = x.astype(np.float32)
-        x = x.reshape(x.shape[0], -1, order='F')
-        x_labels = data_features.labels
-
         # Brain data
-        y = data_brain[sbj].select(rois[roi])
-        y_labels = data_brain[sbj].get_label(label_key)
+        brain = data_brain[sbj].select(rois[roi])
+        brain_labels = data_brain[sbj].get_label(label_key)
 
-        # Use x that has a label included in y
-        x = np.vstack([_x for _x, xl in zip(x, x_labels) if xl in y_labels])
-        x_labels = [xl for xl in x_labels if xl in y_labels]
+        # Features
+        feat_labels = np.unique(brain_labels)
+        feat = data_features.get(layer=layer, label=feat_labels)
+        feat = feat.astype(np.float32)
+        feat = feat.reshape(feat.shape[0], -1, order='F')
+
+        # Use brain data that has a label included in feature data
+        brain = np.vstack([_b for _b, bl in zip(brain, brain_labels) if bl in feat_labels])
+        brain_labels = [bl for bl in brain_labels if bl in feat_labels]
 
         print('Elapsed time (data preparation): %f' % (time() - start_time))
 
         # Calculate normalization parameters
         # ----------------------------------
 
-        # Normalize X (fMRI data)
-        x_mean = np.mean(x, axis=0)[np.newaxis, :]  # np.newaxis was added to match Matlab outputs
-        x_norm = np.std(x, axis=0, ddof=1)[np.newaxis, :]
+        # Normalize brain data
+        brain_mean = np.mean(brain, axis=0)[np.newaxis, :]  # np.newaxis was added to match Matlab outputs
+        brain_norm = np.std(brain, axis=0, ddof=1)[np.newaxis, :]
 
-        # Normalize Y (DNN features)
-        y_mean = np.mean(y, axis=0)[np.newaxis, :]
-        y_norm = np.std(y, axis=0, ddof=1)[np.newaxis, :]
+        # Normalize features
+        feat_mean = np.mean(feat, axis=0)[np.newaxis, :]
+        feat_norm = np.std(feat, axis=0, ddof=1)[np.newaxis, :]
 
-        # X index to sort X by Y (matching samples)
+        # Index to sort features by brain data (matching samples)
         # -----------------------------------------
-        x_index = np.array([np.where(np.array(x_labels) == yl) for yl in y_labels]).flatten()
+        feat_index = np.array([np.where(np.array(feat_labels) == bl) for bl in brain_labels]).flatten()
 
         # Save normalization parameters
         # -----------------------------
         print('Saving normalization parameters.')
         norm_param = {
-            'x_mean': x_mean, 'y_mean': y_mean,
-            'x_norm': x_norm, 'y_norm': y_norm
+            'x_mean': feat_mean, 'y_mean': brain_mean,
+            'x_norm': feat_norm, 'y_norm': brain_norm
         }
         save_targets = [u'x_mean', u'y_mean', u'x_norm', u'y_norm']
         for sv in save_targets:
@@ -211,13 +211,13 @@ def featenc_fastl2lir_train(
         print('Model training')
         start_time = time()
 
-        train = ModelTraining(model, x, y)
+        train = ModelTraining(model, feat, brain)
         train.id = analysis_id
         train.model_parameters = model_param
 
-        train.X_normalize = {'mean': x_mean, 'std': x_norm}
-        train.Y_normalize = {'mean': y_mean, 'std': y_norm}
-        train.X_sort = {'index': x_index}
+        train.X_normalize = {'mean': feat_mean, 'std': feat_norm}
+        train.Y_normalize = {'mean': brain_mean, 'std': brain_norm}
+        train.X_sort = {'index': feat_index}
 
         train.dtype = np.float32
         train.chunk_axis = chunk_axis

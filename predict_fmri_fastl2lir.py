@@ -126,10 +126,10 @@ def featenc_fastl2lir_predict(
         start_time = time()
 
         # Features
-        x = data_features.get(layer=layer)
-        x = x.astype(np.float32)
-        x = x.reshape(x.shape[0], -1, order='F')
-        x_labels = data_features.labels
+        feat = data_features.get(layer=layer)
+        feat = feat.astype(np.float32)
+        feat = feat.reshape(feat.shape[0], -1, order='F')
+        feat_labels = data_features.labels
 
         print('Elapsed time (data preparation): %f' % (time() - start_time))
 
@@ -139,12 +139,12 @@ def featenc_fastl2lir_predict(
 
         # Preprocessing
         # -------------
-        x_mean = load_array(os.path.join(model_dir, 'x_mean.mat'), key='x_mean')  # shape = (1, n_voxels)
-        x_norm = load_array(os.path.join(model_dir, 'x_norm.mat'), key='x_norm')  # shape = (1, n_voxels)
-        y_mean = load_array(os.path.join(model_dir, 'y_mean.mat'), key='y_mean')  # shape = (1, shape_features)
-        y_norm = load_array(os.path.join(model_dir, 'y_norm.mat'), key='y_norm')  # shape = (1, shape_features)
+        feat_mean = load_array(os.path.join(model_dir, 'x_mean.mat'), key='x_mean')  # shape = (1, n_voxels)
+        feat_norm = load_array(os.path.join(model_dir, 'x_norm.mat'), key='x_norm')  # shape = (1, n_voxels)
+        brain_mean = load_array(os.path.join(model_dir, 'y_mean.mat'), key='y_mean')  # shape = (1, shape_features)
+        brain_norm = load_array(os.path.join(model_dir, 'y_norm.mat'), key='y_norm')  # shape = (1, shape_features)
 
-        x = (x - x_mean) / x_norm
+        feat = (feat - feat_mean) / feat_norm
 
         # Prediction
         # ----------
@@ -154,19 +154,19 @@ def featenc_fastl2lir_predict(
 
         model = FastL2LiR()
 
-        test = ModelTest(model, x)
+        test = ModelTest(model, feat)
         test.model_format = 'bdmodel'
         test.model_path = model_dir
         test.dtype = np.float32
         test.chunk_axis = chunk_axis
 
-        y_pred = test.run()
+        brain_pred = test.run()
 
         print('Total elapsed time (prediction): %f' % (time() - start_time))
 
         # Postprocessing
         # --------------
-        y_pred = y_pred * y_norm + y_mean
+        brain_pred = brain_pred * brain_norm + brain_mean
 
         # Save results
         # ------------
@@ -175,15 +175,15 @@ def featenc_fastl2lir_predict(
         start_time = time()
 
         # Predicted features
-        for i, label in enumerate(x_labels):
+        for i, label in enumerate(feat_labels):
             # Predicted fMRI signal
-            fmri = np.array([y_pred[i,]])  # To make feat shape 1 x M x N x ...
+            _brain = np.array([brain_pred[i,]])  # To make feat shape 1 x M x N x ...
 
             # Save file name
             save_file = os.path.join(results_dir_prediction, '%s.mat' % label)
 
             # Save
-            save_array(save_file, fmri, key='fmri', dtype=np.float32, sparse=False)
+            save_array(save_file, _brain, key='fmri', dtype=np.float32, sparse=False)
 
         print('Saved %s' % results_dir_prediction)
 
