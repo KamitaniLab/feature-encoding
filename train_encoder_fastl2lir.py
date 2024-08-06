@@ -89,13 +89,12 @@ def featenc_fastl2lir_train(
     print('----------------------------------------')
     print('Loading data')
 
-    # FIXME: multiple datasets are not supported yet
-    data_brain = {sbj: bdpy.BData(data_files[0]) for sbj, data_files in fmri_data.items()}
+    data_brain = {sbj: [bdpy.BData(f) for f in data_files] for sbj, data_files in fmri_data.items()}
 
     if feature_index_file is not None:
-        data_features = Features(features_paths[0], feature_index=os.path.join(features_paths[0], feature_index_file))
+        data_features = [Features(f, feature_index=os.path.join(f, feature_index_file)) for f in features_paths]
     else:
-        data_features = Features(features_paths[0])
+        data_features = [Features(f) for f in features_paths]
 
     # Initialize directories -------------------------------------------------
     makedir_ifnot(output_dir)
@@ -146,12 +145,12 @@ def featenc_fastl2lir_train(
         start_time = time()
 
         # Brain data
-        brain = data_brain[sbj].select(rois[roi])
-        brain_labels = data_brain[sbj].get_label(label_key)
+        brain = select_data_multi_bdatas(data_brain[sbj], rois[roi])
+        brain_labels = get_labels_multi_bdatas(data_brain[sbj], label_key)
 
         # Features
         feat_labels = np.unique(brain_labels)
-        feat = data_features.get(layer=layer, label=feat_labels)
+        feat = get_multi_features(data_features, layer, labels=feat_labels)
         feat = feat.astype(np.float32)
         feat = feat.reshape(feat.shape[0], -1, order='F')
 
