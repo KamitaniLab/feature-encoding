@@ -1,7 +1,7 @@
 bdpy
 fastl2lir
 hydra-core
-numpy
+numpy<2.0.0
 matplotlib
 pyyaml
 tqdm
