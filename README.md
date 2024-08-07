@@ -19,6 +19,8 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+[Pycortex](https://github.com/gallantlab/pycortex) are optionally required for visualization of voxel-wise encoding accuracy in [evaluation.ipynb](evaluation.ipynb).
+
 ### Data setup
 
 You can download the data used in the encoding analysis by the following command.
@@ -31,7 +33,7 @@ python download.py <data name>
 The following data are available:
 
 - fMRI data
-  - `fmri_deeprecon_fmriprep_vc`: fMRI data of the visual cortex (VC) used in the encoding analysis.
+  - `fmri_deeprecon_fmriprep_hcpvc`: fMRI data of the visual cortex (VC) used in the encoding analysis.
   - `fmri_deeprecon_fmriprep`: fMRI data of the whole brain used in the encoding analysis (not used in the example analysis).
 - DNN features
   - `features_imagenet_training_vgg19_random5000`: VGG-19 features of ImageNet images used as training stimuli in the fMRI experiment; randomly selected 5000 units in each layer.
@@ -47,7 +49,7 @@ Example commands:
 # In "./data" directory:
 
 # fMRI data (visual cortex only)
-python download.py fmri_deeprecon_fmriprep_vc
+python download.py fmri_deeprecon_fmriprep_hcpvc
 
 # VGG-19 features of ImageNet (random 5000 units)
 python download.py features_imagenet_training_vgg19_random5000
@@ -72,10 +74,10 @@ Requried data:
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py config/encoding_deeprecon_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
+python train_encoding_fastl2lir.py config/encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 
 # Prediction of fMRI responses
-python predict_fmri_fastl2lir.py  config/encoding_deeprecon_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
+python predict_fmri_fastl2lir.py  config/encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 ```
 
 Evaluation: see [evaluation.ipynb](evaluation.ipynb)
@@ -92,10 +94,10 @@ Requried data:
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py config/encoding_deeprecon_vgg19_pyfastl2lir_alpha100_select500units.yaml
+python train_encoding_fastl2lir.py config/encoding_deeprecon_hcp_rois_vgg19_pyfastl2lir_alpha100_select500units.yaml
 
 # Prediction of fMRI responses
-python predict_fmri_fastl2lir.py  config/encoding_deeprecon_vgg19_pyfastl2lir_alpha100_select500units.yaml
+python predict_fmri_fastl2lir.py  config/encoding_deeprecon_hcp_rois_vgg19_pyfastl2lir_alpha100_select500units.yaml
 ```
 
 Evaluation: see [evaluation.ipynb](evaluation.ipynb) (need modification)
