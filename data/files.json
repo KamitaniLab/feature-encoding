@@ -75,38 +75,32 @@
             {
                 "name":   "sub-01_ImageNetTest_fmriprep_volume_native_hcpvc.h5",
                 "url":    "https://ndownloader.figshare.com/files/48220339",
-                "md5sum": "6119801f16f5e11959198a48e44c896a",
-                "postproc": [{"name": "unzip", "destination": "./"}]
+                "md5sum": "6119801f16f5e11959198a48e44c896a"
             },
             {
                 "name":   "sub-01_ImageNetTraining_fmriprep_volume_native_hcpvc.h5",
                 "url":    "https://ndownloader.figshare.com/files/48220363",
-                "md5sum": "8d129638681697b76f7dc2986a1f09de",
-                "postproc": [{"name": "unzip", "destination": "./"}]
+                "md5sum": "8d129638681697b76f7dc2986a1f09de"
             },
             {
                 "name":   "sub-02_ImageNetTest_fmriprep_volume_native_hcpvc.h5",
                 "url":    "https://ndownloader.figshare.com/files/48220474",
-                "md5sum": "5e3ad4955a28c16cdcb188cf04225f63",
-                "postproc": [{"name": "unzip", "destination": "./"}]
+                "md5sum": "5e3ad4955a28c16cdcb188cf04225f63"
             },
             {
                 "name":   "sub-02_ImageNetTraining_fmriprep_volume_native_hcpvc.h5",
                 "url":    "https://ndownloader.figshare.com/files/48220507",
-                "md5sum": "dded032c21bb1c7211baff996b471257",
-                "postproc": [{"name": "unzip", "destination": "./"}]
+                "md5sum": "dded032c21bb1c7211baff996b471257"
             },
             {
                 "name":   "sub-03_ImageNetTest_fmriprep_volume_native_hcpvc.h5",
                 "url":    "https://ndownloader.figshare.com/files/48220531",
-                "md5sum": "cb29e467977d3e9d7f57d63b340639d4",
-                "postproc": [{"name": "unzip", "destination": "./"}]
+                "md5sum": "cb29e467977d3e9d7f57d63b340639d4"
             },
             {
                 "name":   "sub-03_ImageNetTraining_fmriprep_volume_native_hcpvc.h5",
                 "url":    "https://ndownloader.figshare.com/files/48220588",
-                "md5sum": "6f37980995d86480bceec964af26471a",
-                "postproc": [{"name": "unzip", "destination": "./"}]
+                "md5sum": "6f37980995d86480bceec964af26471a"
             }
         ]
     },
