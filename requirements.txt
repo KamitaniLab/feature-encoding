@@ -1,5 +1,6 @@
 bdpy
 fastl2lir
+hydra-core
 numpy
 matplotlib
 pyyaml
