@@ -71,9 +71,9 @@ python download.py pycortex
 
 This is light-weighted version of the encoding analysis, which uses randomly selected 5000 units in each layer of VGG-19 instead of all units. The analysis code is expected to run on a typical personal computer.
 
-Requried data:
+Requried data (total ~8GB):
 
-- `fmri_deeprecon_fmriprep_vc`
+- `fmri_deeprecon_fmriprep_hcpvc`
 - `features_imagenet_training_vgg19_random5000`
 - `features_imagenet_test_vgg19_random5000`
 
@@ -93,7 +93,7 @@ This version uses all units in each layer of VGG-19. Note that this requires a l
 
 Requried data:
 
-- `fmri_deeprecon_fmriprep_vc`
+- `fmri_deeprecon_fmriprep_hcpvc`
 - `features_imagenet_training_vgg19`
 - `features_imagenet_test_vgg19`
 
