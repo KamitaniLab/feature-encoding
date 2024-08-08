@@ -32,7 +32,7 @@ python download.py <data name>
 
 The following data are available:
 
-- fMRI data
+- fMRI data ([Shen et al., 2019](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006633))
   - `fmri_deeprecon_fmriprep_hcpvc`: fMRI data of the visual cortex (VC) used in the encoding analysis.
   - `fmri_deeprecon_fmriprep`: fMRI data of the whole brain used in the encoding analysis (not used in the example analysis).
 - DNN features
