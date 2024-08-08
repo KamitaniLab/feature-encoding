@@ -363,5 +363,16 @@
                 "postproc": [{"name": "unzip", "destination": "./"}]
             }
         ]
+    },
+    "pycortex": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "pycortex.zip",
+                "url":    "https://ndownloader.figshare.com/files/48265708",
+                "md5sum": "57826c7eb461885e72c6a24f4ade8558",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
     }
 }
