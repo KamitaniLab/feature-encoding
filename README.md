@@ -40,6 +40,8 @@ The following data are available:
   - `features_imagenet_test_vgg19_random5000`: VGG-19 features of ImageNet images used as test stimuli in the fMRI experiment; randomly selected 5000 units in each layer.
   - `features_imagenet_training_vgg19`: VGG-19 features of ImageNet images used as training stimuli in the fMRI experiment; all units.
   - `features_imagenet_test_vgg19`: VGG-19 features of ImageNet images used as test stimuli in the fMRI experiment; all units.
+- Misc
+  - `pycortex`: Pycortex data used in the visualization of voxel-wise encoding accuracy in [evaluation.ipynb](evaluation.ipynb).
 
 Please download data required in the analysis you want to run (see "Encoding analysis").
 
@@ -58,6 +60,9 @@ python download.py features_imagenet_test_vgg19_random5000
 # VGG-19 features of ImageNet (all units)
 python download.py features_imagenet_training_vgg19
 python download.py features_imagenet_test_vgg19
+
+# Pycortex data
+python download.py pycortex
 ```
 
 ## Encoding analysis
