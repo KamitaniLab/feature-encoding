@@ -27,7 +27,7 @@ import yaml
 def featenc_fastl2lir_train(
         fmri_data: Dict[str, List[str]],
         features_paths: List[str],
-        output_dir: Optional[str] = './feature_encoders',
+        output_dir: str = './feature_encoders',
         rois: Optional[Dict[str, str]] = None,
         label_key: Optional[str] = None,
         layers: Optional[List[str]] = None,
@@ -73,6 +73,8 @@ def featenc_fastl2lir_train(
         rois = {}
     if layers is None:
         layers = []
+    if num_unit is None:
+        num_unit = {}
 
     layers = layers[::-1]  # Start training from deep layers
 
