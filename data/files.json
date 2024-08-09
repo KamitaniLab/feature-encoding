@@ -104,6 +104,21 @@
             }
         ]
     },
+    "fmri_deeprecon_sub-03_fmriprep_hcpvc": {
+        "save_in": "./fmri/Deeprecon",
+        "files": [
+            {
+                "name":   "sub-03_ImageNetTest_fmriprep_volume_native_hcpvc.h5",
+                "url":    "https://ndownloader.figshare.com/files/48220531",
+                "md5sum": "cb29e467977d3e9d7f57d63b340639d4"
+            },
+            {
+                "name":   "sub-03_ImageNetTraining_fmriprep_volume_native_hcpvc.h5",
+                "url":    "https://ndownloader.figshare.com/files/48220588",
+                "md5sum": "6f37980995d86480bceec964af26471a"
+            }
+        ]
+    },
     "features_imagenet_training_vgg19": {
         "save_in": "./",
         "files": [
