@@ -364,6 +364,40 @@
             }
         ]
     },
+    "features_bhscore_allunits_caffe-AlexNet": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTraining-caffe-AlexNet.zip",
+                "url":    "https://ndownloader.figshare.com/files/32901365",
+                "md5sum": "aa7ed4843f4c9061fe8796ab25e31f27",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTest-caffe-AlexNet.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878559",
+                "md5sum": "40f032a7f3ee08dd06cb0dea143b8ab8",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG19_nonaka": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG19_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878640",
+                "md5sum": "de7d86ab57c57433edfdb40b2c500873",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG19_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/33008231",
+                "md5sum": "0f6122e7069c607dc9e3820f52dccf12",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
     "pycortex": {
         "save_in": "./",
         "files": [
