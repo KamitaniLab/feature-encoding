@@ -1,0 +1,13 @@
+# @package _group_
+
+name: caffe/VGG19_nonaka
+layers:
+  - {name: conv1_1_abs, num: 500}
+  - {name: pool1,       num: 500}
+  - {name: pool2,       num: 500}
+  - {name: pool3,       num: 500}
+  - {name: pool4,       num: 500}
+  - {name: pool5,       num: 500}
+  - {name: fc6,         num: 500}
+  - {name: fc7,         num: 500}
+  - {name: fc8,         num: 500}

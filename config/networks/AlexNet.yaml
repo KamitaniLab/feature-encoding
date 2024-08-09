@@ -1,0 +1,12 @@
+# @package _group_
+
+name: caffe/AlexNet
+layers:
+  - {name: conv1_abs, num: 500}
+  - {name: conv2, num: 500}
+  - {name: conv3, num: 500}
+  - {name: conv4, num: 500}
+  - {name: conv5, num: 500}
+  - {name: fc6,   num: 500}
+  - {name: fc7,   num: 500}
+  - {name: fc8,   num: 500}
