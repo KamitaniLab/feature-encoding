@@ -1,7 +1,7 @@
 # DNN feature decoding
 
 defaults:
-  - networks/AlexNet
+  - network/AlexNet
 
 encoder:
   name: bhscore_encoding_fmriprep_hcprois
@@ -30,10 +30,10 @@ encoder:
     label_key: stimulus_name
 
   features:
-    name: ${networks.name}
+    name: ${network.name}
     paths:
-      - ./data/features_all/ImageNetTraining/${networks.name}
-    layers: ${networks.layers}
+      - ./data/features_all/ImageNetTraining/${network.name}
+    layers: ${network.layers}
 
 encoded_fmri:
   name: deeprecon_fmriprep_hcp_rois_pyfastl2lir_alpha100_500units
@@ -67,7 +67,7 @@ encoded_fmri:
     exclude_labels:
 
   features:
-    name: ${networks.name}
+    name: ${network.name}
     paths:
-      - ./data/features_all/ImageNetTest/${networks.name}
-    layers: ${networks.layers}
+      - ./data/features_all/ImageNetTest/${network.name}
+    layers: ${network.layers}
