@@ -5,6 +5,7 @@ This repository provides the code for the feature encoding analysis in ([Nonaka 
 ## Hands-on tutorial
 
 - [handson/01_encoding.ipynb](handson/01_encoding.ipynb) \[[Google Colab](https://colab.research.google.com/github/KamitaniLab/feature-encoding/blob/master/handson/01_encoding.ipynb)\]
+- [handson/02_bhscore.ipynb](handson/02_bhscore.ipynb) \[[Google Colab](https://colab.research.google.com/github/KamitaniLab/feature-encoding/blob/master/handson/02_bhscore.ipynb)\]
 
 ## Usage
 
