@@ -104,6 +104,21 @@
             }
         ]
     },
+    "fmri_deeprecon_sub-03_fmriprep_hcpvc": {
+        "save_in": "./fmri/Deeprecon",
+        "files": [
+            {
+                "name":   "sub-03_ImageNetTest_fmriprep_volume_native_hcpvc.h5",
+                "url":    "https://ndownloader.figshare.com/files/48220531",
+                "md5sum": "cb29e467977d3e9d7f57d63b340639d4"
+            },
+            {
+                "name":   "sub-03_ImageNetTraining_fmriprep_volume_native_hcpvc.h5",
+                "url":    "https://ndownloader.figshare.com/files/48220588",
+                "md5sum": "6f37980995d86480bceec964af26471a"
+            }
+        ]
+    },
     "features_imagenet_training_vgg19": {
         "save_in": "./",
         "files": [
@@ -360,6 +375,295 @@
                 "name":   "features-ImageNetTest-caffe-VGG19_random5000.zip",
                 "url":    "https://ndownloader.figshare.com/files/48177424",
                 "md5sum": "13c0b779e49433b2c7bfbdec429558f5",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-AlexNet": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTraining-caffe-AlexNet.zip",
+                "url":    "https://ndownloader.figshare.com/files/32901365",
+                "md5sum": "aa7ed4843f4c9061fe8796ab25e31f27",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTest-caffe-AlexNet.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878559",
+                "md5sum": "40f032a7f3ee08dd06cb0dea143b8ab8",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG19_nonaka": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG19_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878640",
+                "md5sum": "de7d86ab57c57433edfdb40b2c500873",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG19_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/33008231",
+                "md5sum": "0f6122e7069c607dc9e3820f52dccf12",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG16_nonaka": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG16_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878634",
+                "md5sum": "2cd60fca77340a052d3f436dafaca00a",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG16_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/33003557",
+                "md5sum": "975be86c790f0b2e8d08a559fc17e63e",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG-F": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG-F.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878643",
+                "md5sum": "ea749f01c1d2690908a2fe0b93a80500",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG-F.zip",
+                "url":    "https://ndownloader.figshare.com/files/32970713",
+                "md5sum": "c56649556d2db0ef3510a6bb7625520b",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG-M": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG-M.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878646",
+                "md5sum": "b5aecc6ff9f1a8d5152fdff335328f20",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG-M.zip",
+                "url":    "https://ndownloader.figshare.com/files/32972843",
+                "md5sum": "373a10242710871e36651044a10ebf3e",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG-S": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG-S.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878652",
+                "md5sum": "ca02ba1838d45cfaf4af08964e696564",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG-S.zip",
+                "url":    "https://ndownloader.figshare.com/files/32975132",
+                "md5sum": "1fc677078d0a9b24412aa5c361328ee1",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_pytorch-CORnet_R": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-pytorch-CORnet_R.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878655",
+                "md5sum": "57456201824f32de12710b81b5349bf4",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-pytorch-CORnet_R.zip",
+                "url":    "https://ndownloader.figshare.com/files/33079235",
+                "md5sum": "f199a56bc4333353113cbfefedc1b6e4",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_pytorch-CORnet_S": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-pytorch-CORnet_S.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878658",
+                "md5sum": "ffb9eced3f7bb48b7ece6748f65663f4",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-pytorch-CORnet_S.zip",
+                "url":    "https://ndownloader.figshare.com/files/33079247",
+                "md5sum": "ac3a2dc006752f6c76edbf5255ee7795",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_pytorch-CORnet_Z": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-pytorch-CORnet_Z.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878661",
+                "md5sum": "a616d4f9ca71a74e4a10e603648b93f4",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-pytorch-CORnet_Z.zip",
+                "url":    "https://ndownloader.figshare.com/files/33079295",
+                "md5sum": "5593a4b4c4298804e89610092b082699",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_pytorch-resnet18": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-pytorch-resnet18.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878664",
+                "md5sum": "37fc7b8fb0f2062c01da5c834e3525a6",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-pytorch-resnet18.zip",
+                "url":    "https://ndownloader.figshare.com/files/33079373",
+                "md5sum": "2535b914dea820f2c0978c55c82b5eee",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_pytorch-resnet34": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-pytorch-resnet34.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878673",
+                "md5sum": "6f4dd7412c2c67d2cef44181f98be484",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-pytorch-resnet34.zip",
+                "url":    "https://ndownloader.figshare.com/files/33079484",
+                "md5sum": "f3060d5586d4a5567b26c9fab7225596",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-inception_v1": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-inception_v1.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878679",
+                "md5sum": "04327b64b6b4cf51bec5a50add3ac66c",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-inception_v1.zip",
+                "url":    "https://ndownloader.figshare.com/files/33080060",
+                "md5sum": "2f9cd6b89a0607e0b2f174d538034f1d",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-inception_v2": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-inception_v2.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878685",
+                "md5sum": "6c2b3068c4c3bfacc96c97636f50e70a",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-inception_v2.zip",
+                "url":    "https://ndownloader.figshare.com/files/33080372",
+                "md5sum": "780a23d537d865230d6962484642ddd8",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-inception_v3": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-inception_v3.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878688",
+                "md5sum": "5233fc494319120c481611c66ca7b05d",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-inception_v3.zip",
+                "url":    "https://ndownloader.figshare.com/files/33157214",
+                "md5sum": "52511a7ba56d3383e923d79c69d3c3af",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-inception_v4": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-inception_v4.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878694",
+                "md5sum": "dceeb53578e0810d48fe0a8c8ebc59d2",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-inception_v4.zip",
+                "url":    "https://ndownloader.figshare.com/files/33157673",
+                "md5sum": "6dc1db8e14464f27e23011940c50ddd3",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-mobilenet_v2_1.4_224": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-mobilenet_v2_1.4_224.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878697",
+                "md5sum": "7f852b8807c697f0adf136774659bbdf",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-mobilenet_v2_1.4_224.zip",
+                "url":    "https://ndownloader.figshare.com/files/33151580",
+                "md5sum": "46b4583025308d6a472ab825c45373af",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+        "features_bhscore_allunits_tensorflow-nasnet_mobile": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-nasnet_mobile.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878715",
+                "md5sum": "9c3eb0e0ec30b7ab3695d3d7a7b15ce1",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-nasnet_mobile.zip",
+                "url":    "https://ndownloader.figshare.com/files/33154940",
+                "md5sum": "757aba952363f6dca475f7ca6d1bdf55",
                 "postproc": [{"name": "unzip", "destination": "./"}]
             }
         ]

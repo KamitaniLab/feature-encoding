@@ -1,0 +1,73 @@
+# DNN feature decoding
+
+defaults:
+  - network/AlexNet
+
+encoder:
+  name: bhscore_encoding_fmriprep_hcprois
+  path: ./data/feature_encoders/ImageNetTraining/${encoder.name}/${encoder.features.name}
+  parameters:
+    alpha: 100
+
+  fmri:
+    name: ImageNetTraining_fmriprep_volume_native
+    subjects:
+      #- name: sub-01
+      #  paths:
+      #    - ./data/fmri/Deeprecon/sub-01_${encoder.fmri.name}_hcpvc.h5
+      #- name: sub-02
+      #  paths:
+      #    - ./data/fmri/Deeprecon/sub-02_${encoder.fmri.name}_hcpvc.h5
+      - name: sub-03
+        paths:
+          - ./data/fmri/Deeprecon/sub-03_${encoder.fmri.name}_hcpvc.h5
+    rois:
+      #- {name: V1,        select: hcp180_V1 = 1}
+      #- {name: V2,        select: hcp180_V2 = 1}
+      #- {name: V3,        select: hcp180_V3 = 1}
+      #- {name: V4,        select: hcp180_V4 = 1}
+      - {name: VentralVC, select: hcp180_VentralVC = 1}
+    label_key: stimulus_name
+
+  features:
+    name: ${network.name}
+    paths:
+      - ./data/features_all/ImageNetTraining/${network.name}
+    layers: ${network.layers}
+
+encoded_fmri:
+  name: deeprecon_fmriprep_hcp_rois_pyfastl2lir_alpha100_500units
+  path: ./data/encoded_fmri/ImageNetTest/${encoded_fmri.name}/${encoded_fmri.features.name}
+  parameters:
+    average_sample: true
+
+  encoder:
+    name: deeprecon_fmriprep_pyfastl2lir_alpha100_allunits
+    path: ./data/feature_encoders/ImageNetTraining/${encoder.name}/${encoder.features.name}
+
+  fmri:
+    name: ImageNetTest_fmriprep_volume_native
+    subjects:
+      #- name: sub-01
+      #  paths:
+      #    - ./data/fmri/Deeprecon/sub-01_${encoded_fmri.fmri.name}_vc_hcpvc.h5
+      #- name: sub-02
+      #  paths:
+      #    - ./data/fmri/Deeprecon/sub-02_${encoded_fmri.fmri.name}_vc_hcpvc.h5
+      - name: sub-03
+        paths:
+          - ./data/fmri/Deeprecon/sub-03_${encoded_fmri.fmri.name}_vc_hcpvc.h5
+    rois:
+      - {name: V1,        select: hcp180_V1 = 1}
+      - {name: V2,        select: hcp180_V2 = 1}
+      - {name: V3,        select: hcp180_V3 = 1}
+      - {name: V4,        select: hcp180_V4 = 1}
+      - {name: VentralVC, select: hcp180_VentralVC = 1}
+    label_key: stimulus_name
+    exclude_labels:
+
+  features:
+    name: ${network.name}
+    paths:
+      - ./data/features_all/ImageNetTest/${network.name}
+    layers: ${network.layers}
