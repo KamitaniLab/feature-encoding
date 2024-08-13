@@ -66,10 +66,40 @@ Please follow the instruction in [Environment setup](#environment-setup).
 
 # fMRI data (collected by Shen et al., 2019)
 python download.py fmri_deeprecon_fmriprep_hcpvc 
-
-# [Optional] Pycortex data for visualization
-python download.py pycortex
+python download.py <DNN feature dataset>
 ```
+
+Available DNN feature datasets:
+
+- features_bhscore_allunits_caffe-AlexNet
+- features_bhscore_allunits_caffe-DenseNet_121
+- features_bhscore_allunits_caffe-DenseNet_161
+- features_bhscore_allunits_caffe-DenseNet_169
+- features_bhscore_allunits_caffe-DenseNet_201
+- features_bhscore_allunits_caffe-InceptionResNet-v2
+- features_bhscore_allunits_caffe-SqueeseNet
+- features_bhscore_allunits_caffe-SqueeseNet1.0
+- features_bhscore_allunits_caffe-VGG-F
+- features_bhscore_allunits_caffe-VGG-M
+- features_bhscore_allunits_caffe-VGG-S
+- features_bhscore_allunits_caffe-VGG16_nonaka
+- features_bhscore_allunits_caffe-VGG19_nonaka
+- features_bhscore_allunits_pytorch-CORnet_R
+- features_bhscore_allunits_pytorch-CORnet_S
+- features_bhscore_allunits_pytorch-CORnet_Z
+- features_bhscore_allunits_pytorch-resnet18
+- features_bhscore_allunits_pytorch-resnet34
+- features_bhscore_allunits_tensorflow-inception_v1
+- features_bhscore_allunits_tensorflow-inception_v2
+- features_bhscore_allunits_tensorflow-inception_v3
+- features_bhscore_allunits_tensorflow-inception_v4
+- features_bhscore_allunits_tensorflow-mobilenet_v2_1.4_224
+- features_bhscore_allunits_tensorflow-nasnet_large
+- features_bhscore_allunits_tensorflow-nasnet_mobile
+- features_bhscore_allunits_tensorflow-pnasnet_large
+- features_bhscore_allunits_tensorflow-resnet_v2_101
+- features_bhscore_allunits_tensorflow-resnet_v2_152
+- features_bhscore_allunits_tensorflow-resnet_v2_50
 
 ### Encoding analysis
 
@@ -95,9 +125,35 @@ python predict_fmri_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -
 
 Avaniable networks:
 
-- Alexnet
-- VGG19_nonaka
+- AlexNet
+- DenseNet_121
+- DenseNet_161
+- DenseNet_169
+- DenseNet_201
+- InceptionResNet-v2
+- SqueeseNet
+- SqueeseNet1.0
+- VGG-F
+- VGG-M
+- VGG-S
 - VGG16_nonaka
+- VGG19_nonaka
+- CORnet_R
+- CORnet_S
+- CORnet_Z
+- resnet18
+- resnet34
+- inception_v1
+- inception_v2
+- inception_v3
+- inception_v4
+- mobilenet_v2_1.4_224
+- nasnet_large
+- nasnet_mobile
+- pnasnet_large
+- resnet_v2_101
+- resnet_v2_152
+- resnet_v2_50
 
 ## References
 
