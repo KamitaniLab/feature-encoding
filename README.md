@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 [Pycortex](https://github.com/gallantlab/pycortex) are optionally required for visualization of voxel-wise encoding accuracy in [evaluation.ipynb](evaluation.ipynb).
 
-### 
+### Training of the encoding models and prediction of fMRI responses
 
 ```shell
 # Training of encoding models
@@ -33,6 +33,23 @@ python train_encoding_fastl2lir.py <config.yaml>
 python predict_fmri_fastl2lir.py <config.yaml>
 
 # Evaluation
+jupyter notebook evaluation.ipynb
+```
+
+### Examples
+
+```shell
+# Download example data
+# In ./data directory
+python download.py fmri_deeprecon_fmriprep_hcpvc
+python download.py features_imagenet_training_vgg19_random5000 
+python download.py features_imagenet_test_vgg19_random5000 
+
+# Traning and test
+python train_encoding_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
+python predict_fmri_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
+
+# Evaluation (iPython notebook)
 jupyter notebook evaluation.ipynb
 ```
 
