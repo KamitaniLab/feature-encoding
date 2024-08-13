@@ -1,0 +1,50 @@
+# @package _group_
+
+name: caffe/InceptionResNet-v2
+layers:
+  - {name: conv1_3x3_s2_abs, num: 500}
+  - {name: conv4_3x3, num: 500}
+  - {name: stem_concat, num: 500}
+  - {name: inception_resnet_v2_a1_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a2_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a3_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a4_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a5_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a6_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a7_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a8_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a9_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_a10_residual_eltwise, num: 500}
+  - {name: reduction_a_concat, num: 500}
+  - {name: inception_resnet_v2_b1_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b2_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b3_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b4_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b5_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b6_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b7_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b8_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b9_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b10_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b11_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b12_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b13_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b14_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b15_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b16_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b17_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b18_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b19_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_b20_residual_eltwise, num: 500}
+  - {name: reduction_b_concat, num: 500}
+  - {name: inception_resnet_v2_c1_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c2_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c3_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c4_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c5_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c6_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c7_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c8_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c9_residual_eltwise, num: 500}
+  - {name: inception_resnet_v2_c10_residual_eltwise, num: 500}
+  - {name: classifier, num: 500}

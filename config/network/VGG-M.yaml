@@ -1,6 +1,6 @@
 # @package _group_
 
-name: caffe/AlexNet
+name: caffe/VGG-M
 layers:
   - {name: conv1_abs, num: 500}
   - {name: conv2, num: 500}

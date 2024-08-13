@@ -1,0 +1,10 @@
+# @package _group_
+
+name: pytorch/resnet34
+layers:
+  - {name: conv1_abs, num: 500}
+  - {name: layer1, num: 500}
+  - {name: layer2, num: 500}
+  - {name: layer3, num: 500}
+  - {name: layer4, num: 500}
+  - {name: fc, num: 500}

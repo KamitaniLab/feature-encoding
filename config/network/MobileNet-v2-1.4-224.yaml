@@ -1,0 +1,23 @@
+# @package _group_
+
+name: tensorflow/mobilenet_v2_1.4_224
+layers:
+  - {name: layer_1_abs, num: 500}
+  - {name: layer_2:output, num: 500}
+  - {name: layer_3:output, num: 500}
+  - {name: layer_4:output, num: 500}
+  - {name: layer_5:output, num: 500}
+  - {name: layer_6:output, num: 500}
+  - {name: layer_7:output, num: 500}
+  - {name: layer_8:output, num: 500}
+  - {name: layer_9:output, num: 500}
+  - {name: layer_10:output, num: 500}
+  - {name: layer_11:output, num: 500}
+  - {name: layer_12:output, num: 500}
+  - {name: layer_13:output, num: 500}
+  - {name: layer_14:output, num: 500}
+  - {name: layer_15:output, num: 500}
+  - {name: layer_16:output, num: 500}
+  - {name: layer_17:output, num: 500}
+  - {name: layer_18:output, num: 500}
+  - {name: Logits, num: 500}

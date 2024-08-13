@@ -1,0 +1,39 @@
+# @package _group_
+
+name: tensorflow/resnet_v2_101
+layers:
+  - {name: resnet_v2_101:conv1_abs, num: 500}
+  - {name: resnet_v2_101:block1:unit_1:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block1:unit_2:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block1:unit_3:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block2:unit_1:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block2:unit_2:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block2:unit_3:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block2:unit_4:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_1:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_2:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_3:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_4:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_5:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_6:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_7:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_8:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_9:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_10:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_11:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_12:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_13:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_14:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_15:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_16:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_17:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_18:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_19:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_20:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_21:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_22:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block3:unit_23:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block4:unit_1:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block4:unit_2:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:block4:unit_3:bottleneck_v2, num: 500}
+  - {name: resnet_v2_101:logits, num: 500}

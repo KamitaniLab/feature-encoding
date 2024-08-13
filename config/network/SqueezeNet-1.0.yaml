@@ -1,0 +1,14 @@
+# @package _group_
+
+name: caffe/SqueeseNet1.0
+layers:
+  - {name: conv1_abs, num: 500}
+  - {name: fire2:concat, num: 500}
+  - {name: fire3:concat, num: 500}
+  - {name: fire4:concat, num: 500}
+  - {name: fire5:concat, num: 500}
+  - {name: fire6:concat, num: 500}
+  - {name: fire7:concat, num: 500}
+  - {name: fire8:concat, num: 500}
+  - {name: fire9:concat, num: 500}
+  - {name: pool10, num: 500}

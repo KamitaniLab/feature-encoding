@@ -1,0 +1,19 @@
+# @package _group_
+
+name: tensorflow/pnasnet_large
+layers:
+  - {name: conv0_abs, num: 500}
+  - {name: Stem, num: 500}
+  - {name: Cell_0, num: 500}
+  - {name: Cell_1, num: 500}
+  - {name: Cell_2, num: 500}
+  - {name: Cell_3, num: 500}
+  - {name: Cell_4, num: 500}
+  - {name: Cell_5, num: 500}
+  - {name: Cell_6, num: 500}
+  - {name: Cell_7, num: 500}
+  - {name: Cell_8, num: 500}
+  - {name: Cell_9, num: 500}
+  - {name: Cell_10, num: 500}
+  - {name: Cell_11, num: 500}
+  - {name: Logits, num: 500}

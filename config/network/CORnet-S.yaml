@@ -1,0 +1,10 @@
+# @package _group_
+
+name: pytorch/CORnet_S
+layers:
+  - {name: V1_conv1_abs, num: 500}
+  - {name: V1_output, num: 500}
+  - {name: V2_output, num: 500}
+  - {name: V4_output, num: 500}
+  - {name: IT_output, num: 500}
+  - {name: decoder_linear, num: 500}

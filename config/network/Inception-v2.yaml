@@ -1,0 +1,17 @@
+# @package _group_
+
+name: tensorflow/inception_v2
+layers:
+  - {name: Conv2d_1a_7x7_abs, num: 500}
+  - {name: Conv2d_2c_3x3, num: 500}
+  - {name: Mixed_3b, num: 500}
+  - {name: Mixed_3c, num: 500}
+  - {name: Mixed_4a, num: 500}
+  - {name: Mixed_4b, num: 500}
+  - {name: Mixed_4c, num: 500}
+  - {name: Mixed_4d, num: 500}
+  - {name: Mixed_4e, num: 500}
+  - {name: Mixed_5a, num: 500}
+  - {name: Mixed_5b, num: 500}
+  - {name: Mixed_5c, num: 500}
+  - {name: Logits, num: 500}
