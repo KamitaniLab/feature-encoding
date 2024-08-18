@@ -55,6 +55,8 @@ jupyter notebook evaluation.ipynb
 
 ## Reproduction of Nonaka et al. (2021)
 
+Note: the encoding analysis with all units is very memory-intensive and only executable on HPCs with large RAM.
+
 ### Environment setup
 
 Please follow the instruction in [Environment setup](#environment-setup).
@@ -69,7 +71,7 @@ python download.py fmri_deeprecon_fmriprep_hcpvc
 python download.py <DNN feature dataset>
 ```
 
-Available DNN feature datasets:
+Available DNN feature datasets (not all of them are available yet):
 
 - features_bhscore_allunits_caffe-AlexNet
 - features_bhscore_allunits_caffe-DenseNet_121
