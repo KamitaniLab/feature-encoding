@@ -2,10 +2,9 @@
 
 This repository provides the code for the feature encoding analysis in ([Nonaka et al., 2021](https://doi.org/10.1016/j.isci.2021.103013)) to predict fMRI responses from DNN features.
 
-## Hands-on tutorial
-
-- [handson/01_encoding.ipynb](handson/01_encoding.ipynb) \[[Google Colab](https://colab.research.google.com/github/KamitaniLab/feature-encoding/blob/master/handson/01_encoding.ipynb)\]
-- [handson/02_bhscore.ipynb](handson/02_bhscore.ipynb) \[[Google Colab](https://colab.research.google.com/github/KamitaniLab/feature-encoding/blob/master/handson/02_bhscore.ipynb)\]
+- [Usage](#usage)
+- [Hands-on tutorials](#hands-on-tutorials)
+- [Reproduction of Nonaka et al. (2021)](#reproduction-of-nonaka-et-al-2021)
 
 ## Usage
 
@@ -53,7 +52,16 @@ python predict_fmri_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg1
 jupyter notebook evaluation.ipynb
 ```
 
+## Hands-on tutorials
+
+These iPython notebooks provides hands-on tutorials for the encoding analysis (DNN features to fMRI responses) and calculation of the brain hierarchically (BH) score based on the encoding and decoding results (Nonaka et al., 2021).
+
+- [handson/01_encoding.ipynb](handson/01_encoding.ipynb) \[[Google Colab](https://colab.research.google.com/github/KamitaniLab/feature-encoding/blob/master/handson/01_encoding.ipynb)\]
+- [handson/02_bhscore.ipynb](handson/02_bhscore.ipynb) \[[Google Colab](https://colab.research.google.com/github/KamitaniLab/feature-encoding/blob/master/handson/02_bhscore.ipynb)\]
+
 ## Reproduction of Nonaka et al. (2021)
+
+Here we describe how to reproduce the encoding analysis in Nonaka et al. (2021) using the feature-encoding codebase.
 
 Note: the encoding analysis with all units in each DNN layer is very memory-intensive and only executable on HPCs with large RAM.
 Less memory-intensive version will be added soon.
