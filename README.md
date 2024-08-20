@@ -37,12 +37,19 @@ jupyter notebook evaluation.ipynb
 
 ### Examples
 
+This example runs encoding analysis for the following conditions. It takes approximinately 30 minutes and requires about 2GB RAM.
+
+- Subject: sub-01
+- ROI: V1, V2, V2, V3, V4, and Ventral VC
+- DNN features: VGG-19 (layers: conv1_2, conv2_2, conv3_4, conv4_4, conv5_4, fc6, fc7, and fc8), randomly selected 5000 units for each layer
+
 ```shell
 # Download example data
 # In ./data directory
 python download.py fmri_deeprecon_fmriprep_hcpvc
-python download.py features_imagenet_training_vgg19_random5000 
-python download.py features_imagenet_test_vgg19_random5000 
+python download.py features_imagenet_training_vgg19_random5000
+python download.py features_imagenet_test_vgg19_random5000
+python download.py pycortex  # Optional, required for Pycortex visualization
 
 # Traning and test
 python train_encoding_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
