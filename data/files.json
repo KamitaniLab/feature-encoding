@@ -396,36 +396,121 @@
             }
         ]
     },
-    "features_bhscore_allunits_caffe-VGG19_nonaka": {
+    "features_bhscore_allunits_caffe-DenseNet_121": {
         "save_in": "./",
         "files": [
             {
-                "name":   "features_all-ImageNetTest-caffe-VGG19_nonaka.zip",
-                "url":    "https://ndownloader.figshare.com/files/32878640",
-                "md5sum": "de7d86ab57c57433edfdb40b2c500873",
+                "name":   "features_all-ImageNetTest-caffe-DenseNet_121.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878586",
+                "md5sum": "7ef92a5af9315953e985fc775d3317cb",
                 "postproc": [{"name": "unzip", "destination": "./"}]
             },
             {
-                "name":   "features_all-ImageNetTraining-caffe-VGG19_nonaka.zip",
-                "url":    "https://ndownloader.figshare.com/files/33008231",
-                "md5sum": "0f6122e7069c607dc9e3820f52dccf12",
-                "postproc": [{"name": "unzip", "destination": "./"}]
+                "name":   "features_all-ImageNetTraining-caffe-DenseNet_121.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33287366", "https://ndownloader.figshare.com/files/33287882", "https://ndownloader.figshare.com/files/33287921"],
+                "md5sum": ["ca99808dd2d076aee6653e96d70a9e5d", "483cde532daf19de64b3c8fd91ee5652", "1e593152226121f2ae56791f636518ca"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
             }
         ]
     },
-    "features_bhscore_allunits_caffe-VGG16_nonaka": {
+    "features_bhscore_allunits_caffe-DenseNet_161": {
         "save_in": "./",
         "files": [
             {
-                "name":   "features_all-ImageNetTest-caffe-VGG16_nonaka.zip",
-                "url":    "https://ndownloader.figshare.com/files/32878634",
-                "md5sum": "2cd60fca77340a052d3f436dafaca00a",
+                "name":   "features_all-ImageNetTest-caffe-DenseNet_161.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878598",
+                "md5sum": "0918000d6e514dd97a89a53fa0c271a1",
                 "postproc": [{"name": "unzip", "destination": "./"}]
             },
             {
-                "name":   "features_all-ImageNetTraining-caffe-VGG16_nonaka.zip",
-                "url":    "https://ndownloader.figshare.com/files/33003557",
-                "md5sum": "975be86c790f0b2e8d08a559fc17e63e",
+                "name":   "features_all-ImageNetTraining-caffe-DenseNet_161.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33358598", "https://ndownloader.figshare.com/files/33358739", "https://ndownloader.figshare.com/files/33360572", "https://ndownloader.figshare.com/files/33362681", "https://ndownloader.figshare.com/files/33362726"],
+                "md5sum": ["1a733393c24467559b77a38e1f203984", "0f9a91e02d820b4ba27b8d0eaa2caa7f", "5a720a053ecdefea8cd66c789f3682ad", "df14cd1ed64e5f719a43dcc09aa996aa", "d1dff02b6a783b381f5b01bdf2ecab94"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-DenseNet_169": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-DenseNet_169.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878610",
+                "md5sum": "9c7b6bb6691648d47ee2323b21bf3e8c",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-DenseNet_169.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33365762", "https://ndownloader.figshare.com/files/33375758", "https://ndownloader.figshare.com/files/33399371"],
+                "md5sum": ["79c59061f96e6a0f27ae09a05eda0bbc", "3b1f11d962a6fc56a0c6d69ad5504fb4", "ff1e91ff90ae5d604130f64393784816"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-DenseNet_201": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-DenseNet_201.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878619",
+                "md5sum": "bee810cdd5f27c8927d8d899b1cd0b38",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-DenseNet_201.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33403757", "https://ndownloader.figshare.com/files/33447575", "https://ndownloader.figshare.com/files/33447728", "https://ndownloader.figshare.com/files/33459317"],
+                "md5sum": ["", "7874192c53b8535eddb215806f524542", "a4e4916b9f6e29b9ed9a4e112482b3ea", "2aa521d9c37bd46030473bc58dd718f2"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-InceptionResNet-v2": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-InceptionResNet-v2.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878625",
+                "md5sum": "2a110592688c717cac34e62cd71b9308",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-InceptionResNet-v2.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33473486", "https://ndownloader.figshare.com/files/33527549", "https://ndownloader.figshare.com/files/33527939"],
+                "md5sum": ["e80262b88a889c305010c89eb961db3f", "cbf88d1b1822ba94a4e87f02169da636", "0d528410a52d323c87ae8e19965dff11"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-SqueeseNet": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTraining-caffe-SqueeseNet.zip",
+                "url":    "https://ndownloader.figshare.com/files/32903426",
+                "md5sum": "745fcd254011d385c9dd3a976a7cac13",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTest-caffe-SqueeseNet.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878628",
+                "md5sum": "2972c830012043f93e6a9c001f84e838",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+        ]
+    },
+    "features_bhscore_allunits_caffe-SqueeseNet1.0": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTraining-caffe-SqueeseNet1.0.zip",
+                "url":    "https://ndownloader.figshare.com/files/32906450",
+                "md5sum": "8c20342267a2dfaa96064d259b7ae3b3",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTest-caffe-SqueeseNet1.0.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878631",
+                "md5sum": "7cea4e69f4ad9e66b1eafcd94b7d6371",
                 "postproc": [{"name": "unzip", "destination": "./"}]
             }
         ]
@@ -477,6 +562,40 @@
                 "name":   "features_all-ImageNetTraining-caffe-VGG-S.zip",
                 "url":    "https://ndownloader.figshare.com/files/32975132",
                 "md5sum": "1fc677078d0a9b24412aa5c361328ee1",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG16_nonaka": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG16_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878634",
+                "md5sum": "2cd60fca77340a052d3f436dafaca00a",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG16_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/33003557",
+                "md5sum": "975be86c790f0b2e8d08a559fc17e63e",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_caffe-VGG19_nonaka": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-caffe-VGG19_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878640",
+                "md5sum": "de7d86ab57c57433edfdb40b2c500873",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-caffe-VGG19_nonaka.zip",
+                "url":    "https://ndownloader.figshare.com/files/33008231",
+                "md5sum": "0f6122e7069c607dc9e3820f52dccf12",
                 "postproc": [{"name": "unzip", "destination": "./"}]
             }
         ]
@@ -651,7 +770,24 @@
             }
         ]
     },
-        "features_bhscore_allunits_tensorflow-nasnet_mobile": {
+    "features_bhscore_allunits_tensorflow-nasnet_large": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-nasnet_large.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878712",
+                "md5sum": "768300de8f8bf3f2c52f5683b95d07bc",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-nasnet_large.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33540686", "https://ndownloader.figshare.com/files/33549602", "https://ndownloader.figshare.com/files/33638723", "https://ndownloader.figshare.com/files/33644051", "https://ndownloader.figshare.com/files/33652460"],
+                "md5sum": ["0fe80664be8ea9d2fed4a3b2ddadc02c", "b3fca9b79e3b9c3b6146e8265542b887", "f9d9026d46272dd6738dc8fbfa575e98", "", "69836da780f6ea26c4d188d3a12e2bcf"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-nasnet_mobile": {
         "save_in": "./",
         "files": [
             {
@@ -668,14 +804,71 @@
             }
         ]
     },
-    "pycortex": {
+    "features_bhscore_allunits_tensorflow-pnasnet_large": {
         "save_in": "./",
         "files": [
             {
-                "name":   "pycortex.zip",
-                "url":    "https://ndownloader.figshare.com/files/48265708",
-                "md5sum": "57826c7eb461885e72c6a24f4ade8558",
+                "name":   "features_all-ImageNetTest-tensorflow-pnasnet_large.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878742",
+                "md5sum": "936e0b31c647395626a9dbef5976cf56",
                 "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-pnasnet_large.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33655901", "https://ndownloader.figshare.com/files/33658091", "https://ndownloader.figshare.com/files/33658610", "https://ndownloader.figshare.com/files/33660215"],
+                "md5sum": ["8153dfdc317a7fc0e4da0592c1ff92f4", "9b9fdb7f6ca84c79daa79f66e27b00fc", "2c6d43f5f19ceafdf7d89563fadc7248", "9582e3e15c4150fb0415f3872d9f5598"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-resnet_v2_101": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-resnet_v2_101.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878754",
+                "md5sum": "1b772f6f9341e0cc46b63ab19e9d1978",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-resnet_v2_101.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33671498", "https://ndownloader.figshare.com/files/33671567"],
+                "md5sum": ["37a57ad6ac5efee1cccf82e4452edf3a", "a6b4bf9fddeca4ff86bb7c106a357d4d"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-resnet_v2_152": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-resnet_v2_152.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878766",
+                "md5sum": "bed1c6db70c8e998f21d03a6353267a1",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-resnet_v2_152.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33773318", "https://ndownloader.figshare.com/files/33777761", "https://ndownloader.figshare.com/files/33780851"],
+                "md5sum": ["62a2e099181f3e30f2146a8eedf99e53", "627a3f10cfc87c302e34d0819300c5e4", "1651c332854eec026514f1457ecd9201"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "features_bhscore_allunits_tensorflow-resnet_v2_50": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "features_all-ImageNetTest-tensorflow-resnet_v2_50.zip",
+                "url":    "https://ndownloader.figshare.com/files/32878748",
+                "md5sum": "07674f354378f564be8123e29a378822",
+                "postproc": [{"name": "unzip", "destination": "./"}]
+            },
+            {
+                "name":   "features_all-ImageNetTraining-tensorflow-resnet_v2_50.zip",
+                "url":    ["https://ndownloader.figshare.com/files/33660482", "https://ndownloader.figshare.com/files/33660500"],
+                "md5sum": ["", "0c65d0d6877b97294c103c3037ea53cc"],
+                "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
             }
         ]
     }
