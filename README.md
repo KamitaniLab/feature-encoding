@@ -87,16 +87,16 @@ python download.py fmri_deeprecon_fmriprep_hcpvc
 python download.py <DNN feature dataset>
 ```
 
-Available DNN feature datasets (not all of them are available yet):
+Available DNN feature datasets:
 
 - features_bhscore_allunits_caffe-AlexNet
-- [TBA] features_bhscore_allunits_caffe-DenseNet_121
-- [TBA] features_bhscore_allunits_caffe-DenseNet_161
-- [TBA] features_bhscore_allunits_caffe-DenseNet_169
-- [TBA] features_bhscore_allunits_caffe-DenseNet_201
-- [TBA] features_bhscore_allunits_caffe-InceptionResNet-v2
-- [TBA] features_bhscore_allunits_caffe-SqueeseNet
-- [TBA] features_bhscore_allunits_caffe-SqueeseNet1.0
+- features_bhscore_allunits_caffe-DenseNet_121
+- features_bhscore_allunits_caffe-DenseNet_161
+- features_bhscore_allunits_caffe-DenseNet_169
+- features_bhscore_allunits_caffe-DenseNet_201
+- features_bhscore_allunits_caffe-InceptionResNet-v2
+- features_bhscore_allunits_caffe-SqueeseNet
+- features_bhscore_allunits_caffe-SqueeseNet1.0
 - features_bhscore_allunits_caffe-VGG-F
 - features_bhscore_allunits_caffe-VGG-M
 - features_bhscore_allunits_caffe-VGG-S
@@ -112,12 +112,12 @@ Available DNN feature datasets (not all of them are available yet):
 - features_bhscore_allunits_tensorflow-inception_v3
 - features_bhscore_allunits_tensorflow-inception_v4
 - features_bhscore_allunits_tensorflow-mobilenet_v2_1.4_224
-- [TBA] features_bhscore_allunits_tensorflow-nasnet_large
+- features_bhscore_allunits_tensorflow-nasnet_large
 - features_bhscore_allunits_tensorflow-nasnet_mobile
-- [TBA] features_bhscore_allunits_tensorflow-pnasnet_large
-- [TBA] features_bhscore_allunits_tensorflow-resnet_v2_101
-- [TBA] features_bhscore_allunits_tensorflow-resnet_v2_152
-- [TBA] features_bhscore_allunits_tensorflow-resnet_v2_50
+- features_bhscore_allunits_tensorflow-pnasnet_large
+- features_bhscore_allunits_tensorflow-resnet_v2_101
+- features_bhscore_allunits_tensorflow-resnet_v2_152
+- features_bhscore_allunits_tensorflow-resnet_v2_50
 
 ### Encoding analysis
 
