@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py <config.yaml>
+python train_encoder_fastl2lir.py <config.yaml>
 
 # Prediction of fMRI responses
 python predict_fmri_fastl2lir.py <config.yaml>
@@ -52,7 +52,7 @@ python download.py features_imagenet_test_vgg19_random5000
 python download.py pycortex  # Optional, required for Pycortex visualization
 
 # Traning and test
-python train_encoding_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
+python train_encoder_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 python predict_fmri_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 
 # Evaluation (iPython notebook)
@@ -83,7 +83,7 @@ Please follow the instruction in [Environment setup](#environment-setup).
 # In "./data" directory:
 
 # fMRI data (collected by Shen et al., 2019)
-python download.py fmri_deeprecon_fmriprep_hcpvc 
+python download.py fmri_deeprecon_fmriprep_hcpvc
 python download.py <DNN feature dataset>
 ```
 
@@ -125,7 +125,7 @@ Command:
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=<network name>
+python train_encoder_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=<network name>
 
 # Prediction of fMRI responses
 python predict_fmri_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=<network name>
@@ -135,7 +135,7 @@ Example:
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=AlexNet
+python train_encoder_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=AlexNet
 
 # Prediction of fMRI responses
 python predict_fmri_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=AlexNet
