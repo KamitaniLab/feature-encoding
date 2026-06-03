@@ -495,7 +495,7 @@
                 "url":    "https://ndownloader.figshare.com/files/32878628",
                 "md5sum": "2972c830012043f93e6a9c001f84e838",
                 "postproc": [{"name": "unzip", "destination": "./"}]
-            },
+            }
         ]
     },
     "features_bhscore_allunits_caffe-SqueeseNet1.0": {
