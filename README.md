@@ -10,14 +10,14 @@ This repository provides the code for the feature encoding analysis in ([Nonaka 
 
 ### Environment setup
 
-See [requirements.txt](requirements.txt) for the required Python packages.
-
-Here is example commands to setup environment using venv.
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and then run:
 
 ```shell
-python -m venv .venv
+# Create .venv and install all dependencies (reads pyproject.toml / uv.lock)
+$ uv sync
+
+# Activate (optional; scripts can also be run via `uv run python ...`)
 . .venv/bin/activate
-pip install -r requirements.txt
 ```
 
 [Pycortex](https://github.com/gallantlab/pycortex) are optionally required for visualization of voxel-wise encoding accuracy in [evaluation.ipynb](evaluation.ipynb).
