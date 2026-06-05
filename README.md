@@ -22,6 +22,11 @@ $ uv sync
 
 [Pycortex](https://github.com/gallantlab/pycortex) are optionally required for visualization of voxel-wise encoding accuracy in [evaluation.ipynb](evaluation.ipynb).
 
+```shell
+# Optional dependencies can be installed by specifying "visualization" extra
+$ uv sync --extra visualization
+```
+
 ### Training of the encoding models and prediction of fMRI responses
 
 ```shell
@@ -58,6 +63,8 @@ python predict_fmri_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg1
 # Evaluation (iPython notebook)
 jupyter notebook evaluation.ipynb
 ```
+
+**NOTE**: In `evaluation.ipynb`, it is assumed that the default Pycortex filestore is set to `./data/pycortex`. Please make sure to update [your config file](https://gallantlab.org/pycortex/auto_examples/quickstart/show_config.html) accordingly before running the code.
 
 ## Hands-on tutorials
 
