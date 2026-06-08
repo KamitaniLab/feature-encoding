@@ -495,7 +495,7 @@
                 "url":    "https://ndownloader.figshare.com/files/32878628",
                 "md5sum": "2972c830012043f93e6a9c001f84e838",
                 "postproc": [{"name": "unzip", "destination": "./"}]
-            },
+            }
         ]
     },
     "features_bhscore_allunits_caffe-SqueeseNet1.0": {
@@ -869,6 +869,17 @@
                 "url":    ["https://ndownloader.figshare.com/files/33660482", "https://ndownloader.figshare.com/files/33660500"],
                 "md5sum": ["", "0c65d0d6877b97294c103c3037ea53cc"],
                 "postproc": [{"name": "merge"}, {"name": "unzip", "destination": "./"}]
+            }
+        ]
+    },
+    "pycortex": {
+        "save_in": "./",
+        "files": [
+            {
+                "name":   "pycortex.zip",
+                "url":    "https://ndownloader.figshare.com/files/48265708",
+                "md5sum": "57826c7eb461885e72c6a24f4ade8558",
+                "postproc": [{"name": "unzip", "destination": "./"}]
             }
         ]
     }

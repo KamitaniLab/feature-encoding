@@ -10,23 +10,28 @@ This repository provides the code for the feature encoding analysis in ([Nonaka 
 
 ### Environment setup
 
-See [requirements.txt](requirements.txt) for the required Python packages.
-
-Here is example commands to setup environment using venv.
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and then run:
 
 ```shell
-python -m venv .venv
+# Create .venv and install all dependencies (reads pyproject.toml / uv.lock)
+$ uv sync
+
+# Activate (optional; scripts can also be run via `uv run python ...`)
 . .venv/bin/activate
-pip install -r requirements.txt
 ```
 
 [Pycortex](https://github.com/gallantlab/pycortex) are optionally required for visualization of voxel-wise encoding accuracy in [evaluation.ipynb](evaluation.ipynb).
+
+```shell
+# Optional dependencies can be installed by specifying "visualization" extra
+$ uv sync --extra visualization
+```
 
 ### Training of the encoding models and prediction of fMRI responses
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py <config.yaml>
+python train_encoder_fastl2lir.py <config.yaml>
 
 # Prediction of fMRI responses
 python predict_fmri_fastl2lir.py <config.yaml>
@@ -52,12 +57,14 @@ python download.py features_imagenet_test_vgg19_random5000
 python download.py pycortex  # Optional, required for Pycortex visualization
 
 # Traning and test
-python train_encoding_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
+python train_encoder_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 python predict_fmri_fastl2lir.py config/example_encoding_deeprecon_hcp_rois_vgg19_random5000_pyfastl2lir_alpha100_select500units.yaml
 
 # Evaluation (iPython notebook)
 jupyter notebook evaluation.ipynb
 ```
+
+**NOTE**: In `evaluation.ipynb`, it is assumed that the default Pycortex filestore is set to `./data/pycortex`. Please make sure to update [your config file](https://gallantlab.org/pycortex/auto_examples/quickstart/show_config.html) accordingly before running the code.
 
 ## Hands-on tutorials
 
@@ -83,7 +90,7 @@ Please follow the instruction in [Environment setup](#environment-setup).
 # In "./data" directory:
 
 # fMRI data (collected by Shen et al., 2019)
-python download.py fmri_deeprecon_fmriprep_hcpvc 
+python download.py fmri_deeprecon_fmriprep_hcpvc
 python download.py <DNN feature dataset>
 ```
 
@@ -125,7 +132,7 @@ Command:
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=<network name>
+python train_encoder_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=<network name>
 
 # Prediction of fMRI responses
 python predict_fmri_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=<network name>
@@ -135,7 +142,7 @@ Example:
 
 ```shell
 # Training of encoding models
-python train_encoding_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=AlexNet
+python train_encoder_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=AlexNet
 
 # Prediction of fMRI responses
 python predict_fmri_fastl2lir.py config/bhscore_encoding_fmriprep_hcprois.yaml -o +network=AlexNet
